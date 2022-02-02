@@ -1,0 +1,14 @@
+body {
+  background-color: cadetblue;
+}
+
+.container{
+  display: flex;
+  fle
+}
+.box {
+    border: 1px solid white;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+}

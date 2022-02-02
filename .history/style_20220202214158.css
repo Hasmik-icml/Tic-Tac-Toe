@@ -1,0 +1,13 @@
+body {
+  background-color: cadetblue;
+}
+
+.container{
+  display: ;
+}
+.box {
+    border: 1px solid white;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+}
