@@ -2,16 +2,28 @@ let player = "x";
 let winer = false;
 
 document.querySelector(".restart").onclick = () => {
-  window.location.reload();
+  // window.location.reload();
+  player = "x";
+  winer = false;
+  let moves = document.querySelectorAll(".box");
+  moves[0].innerHTML = "";
+  moves[1].innerHTML = "";
+  moves[2].innerHTML = "";
+  moves[3].innerHTML = "";
+  moves[4].innerHTML = "";
+  moves[5].innerHTML = "";
+  moves[6].innerHTML = "";
+  moves[7].innerHTML = "";
+  moves[8].innerHTML = "";
+  document.querySelector(".display-player").innerHTML = `It's ${player}'s turn`;
 }
 
 document.querySelector(".container").onclick = (event) => {
   let move = event.target;
   let itsTurn = document.querySelector(".display-player");
   let winerIs;
-  if (!winer) {
-
-    if (move.innerHTML === "") {
+  if (!winer) { // էս բլոկում false-ի դեպքում կլիկը դեռ աշխատում է, այսինքն հենց true, եղավ ուրեմն հաղթող կա
+    if (move.innerHTML === "") { // ու էլ կլիկի ժամանակ չի նկարի դիվի մեջ
       move.innerHTML = player;
       console.log(player);
       winerIs = player;
@@ -88,6 +100,7 @@ function isWon(winerIs) {
     return;
   }
 
+  // ստուգում ենք ոչ ոքի դեպքը
   let statusNoOnes = false;
 
   for (let i = 0; i < moves.length; i++) {
